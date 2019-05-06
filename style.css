@@ -1,0 +1,64 @@
+*{padding: 0; margin: 0;}
+
+#content{
+   background: #e7eef5;
+   
+   height: 500px; 
+   display: flex;/*incializa a flex-box dizendo assim q 
+   todos os filhos dela vão se comportar como blocos*/
+
+   flex-direction: row;/*As propriedades que a flex-direction aceita são:
+    row, column, row-reverse,column-reverse */
+
+    flex-wrap: no-wrap; /*Determina se os conteudos filhos vão 
+    - aceitar a quebra de conteudo:
+    - wrap: aceita a quebra
+    - no-wrap: não aceita a quebra
+    - wrap-reverse: aceita a quebra, mas organiza os elementos de forma reversa*/
+
+    justify-content: flex-start;/*Elementos da justify-content:
+    - flex-start: todos os elementos começam do topo da diereita para esquerda
+    - flex-end: todos os elementos são exibidos em orde na parte direita da tela
+    - space-around: distribui uniformimente os elementos dentro do parametro da div
+    - space-between: não coloca nenhum espaço nas estremidade dos elemento e tenta 
+    distribui-los de forma igual 
+    */
+
+    align-items: baseline;/*Ajusta alinhamento vertical com os parametros:
+    - flex-start: deixa no topo esquerdo
+    - flex-end: deixa embaixo na esqueda
+    - center: alinha no centro veticalmente*/
+
+}
+
+.item {
+    
+    /*
+    flex: 0 1 auto;
+    flex-grow: 0;//ocupa o resto da largura da div
+    flex-shrink: 1;//encolhe a nossa div
+    flex-basis: 15px;//define um width de cada elemento caso não tenha
+    */
+    height: 50px;
+    color: black;
+    -web-kit-box-shadow: 0px 2px 8px -1px rgba(0,0,0,0.25);
+    background: white;
+    margin: 5px;
+}
+
+.item:nth-child(1){
+    flex-grow: 1;
+}
+
+/*.item:nth-child(1){ //item que vai ser exibido
+    order: 4; //ordem que vai ser exibido
+}
+.item:nth-child(2){
+    order: 2;
+}
+.item:nth-child(3){
+    order: 1;
+}
+.item:nth-child(4){
+    order: 3;
+}*/
